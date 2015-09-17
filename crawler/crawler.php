@@ -1,5 +1,18 @@
 <?php
+/*
+  A sitemap generator that crawls a given URL and searches for href tags and gets all links on
+  that domain. Run it on a local host or push it to a server.
+  This crawler does not support user authentication.
+  The sitemap XML will only generate the links, the user will need to manully add in the priority
+  and the last modified. The map will be saved as "sitemap.xml" in this root folder.
 
+  Help from: http://stackoverflow.com/questions/2313107/how-do-i-make-a-simple-crawler-in-php
+
+  TODO:
+  1)  Add header checker for the last modified and default it to that instead of the user adding
+      it manually.
+  2)  Make more object oriented with regards to separating the inline HTML.
+*/
 class crawler
 {
     protected $_url;
