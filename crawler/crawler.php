@@ -74,6 +74,8 @@ class crawler
     protected function _getContent($url)
     {
         $handle = curl_init($url);
+
+        // CURLOPT_RETURNTRANSFER flag for getting the content
         curl_setopt($handle, CURLOPT_RETURNTRANSFER, TRUE);
         $response = curl_exec($handle);
 
