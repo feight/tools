@@ -30,7 +30,6 @@ class crawler
         $this->_depth = $depth;
         $parse = parse_url($url);
         $this->_host = $parse['host'];
-
         $this->_xml = new SimpleXMLElement('<urlset/>');
     }
 
@@ -175,7 +174,6 @@ class crawler
         echo "<br/>";
         echo "<b>URL Content Anchors:</b>";
         echo "<br/>";
-
     }
 
     // post process function, saveing and displaying a sitemap
@@ -196,12 +194,10 @@ class crawler
         echo "<br/>";
         echo "</pre>";
         echo "</pre>";
-        echo "<textarea wrap='off' style = 'width:100%; height: 100%;'>";
 
+        echo "<textarea wrap='off' style='width:100%; height: 100%;'>";
         echo $dom->saveXML();
-
         echo "</textarea>";
-
     }
 
     // add the seen filter
@@ -215,7 +211,6 @@ class crawler
         $this->getHeaders($this->_url); // get the headers
         $this->crawl_page($this->_url, $this->_depth); // crawl the page
         $this->post_process($this->_url); // generate a XML sitemap
-
     }
 }
 
