@@ -215,7 +215,7 @@ class crawler
 }
 
 // give the URL here
-$startURL = 'http://flatcircle.io';
+$startURL = 'http://public.redactor.co.za/';
 $depth = 6;
 $crawler = new crawler($startURL, $depth);
 $crawler->run();
